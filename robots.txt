@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cash-4-junk-cars-miami.com/sitemap.xml
