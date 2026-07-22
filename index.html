@@ -108,11 +108,14 @@
         <input type="hidden" name="redirect" value="/thank-you.html">
         <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <h2>Get Your Cash Offer</h2>
-        <label>First Name <input name="First Name" required></label>
-        <label>Phone Number <input name="Phone" type="tel" inputmode="tel" required></label>
-        <label>Vehicle Year <input name="Year"></label>
-        <label>Make and Model <input name="Vehicle"></label>
-        <label>Does it run? <select name="Condition"><option>Yes, it runs</option><option>It starts but does not drive</option><option>No, it does not run</option></select></label>
+        <label>Name <input name="Name" autocomplete="name" required></label>
+        <label>Make <input name="Make" autocomplete="off" required></label>
+        <label>Model <input name="Model" autocomplete="off" required></label>
+        <label>Year <input name="Year" inputmode="numeric" required></label>
+        <label>What damage does it have? <input name="Damage" autocomplete="off"></label>
+        <label>What area is it located in? <input name="Area" autocomplete="address-level2" required></label>
+        <label>Phone <input name="Phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <label>Email <input name="Email" type="email" autocomplete="email"></label>
         <button class="button primary" type="submit">Get My Offer</button>
       </form>
     </section>
