@@ -24,3 +24,6 @@
   .real-work { grid-template-columns: 1fr; }
   .sticky-mobile-actions{position:fixed;left:0;right:0;bottom:0;z-index:8;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fff;padding:10px;box-shadow:0 -6px 18px #0002}.sticky-mobile-actions a{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:8px;background:var(--brand);color:#fff;font-weight:900;text-decoration:none}.sticky-mobile-actions .whatsapp{background:#25d366!important;color:#07150b!important}
 }
+
+/* Preserve the complete composition of real service photos, including vertical images. */
+.real-work img{aspect-ratio:auto;max-height:680px;object-fit:contain;background:#10202a}
