@@ -125,12 +125,14 @@
         <input type="hidden" name="redirect" value="/thank-you.html">
         <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <h2>Get Your Cash Offer</h2>
-        <label>Phone Number <input name="Phone" type="tel" inputmode="tel" required></label>
-        <label>Vehicle Year <input name="Year"></label>
-        <label>Make and Model <input name="Vehicle"></label>
-        <label>Does it run? <select name="Condition"><option>Yes, it runs</option><option>It starts but does not drive</option><option>No, it does not run</option></select></label>
-        <button class="button primary" type="submit">Get My Cash Offer</button>
-        <p class="form-call-option">Prefer to talk now? <a href="tel:+13054570817">Call (305) 457-0817</a></p>
+        <label>Phone <input name="Phone" type="tel" inputmode="tel" required></label>
+        <label>Email <input name="Email" type="email"></label>
+        <label>Make <input name="Make" placeholder="Example: Toyota" required></label>
+        <label>Model <input name="Model" placeholder="Example: Camry" required></label>
+        <label>Year <input name="Year" type="number" inputmode="numeric" min="1900" max="2027" placeholder="Example: 2012" required></label>
+        <label>Vehicle Damage <textarea name="Vehicle Damage" rows="3" placeholder="Describe the damage or mechanical problems" required></textarea></label>
+        <label>Vehicle Location <input name="Vehicle Location" placeholder="City or ZIP code" required></label>
+        <button class="button primary" type="submit">Request Quote</button>
       </form>
     </section>
 
