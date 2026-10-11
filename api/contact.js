@@ -85,7 +85,8 @@ export default async function handler(req, res) {
   }
 
   const requestedRedirect = params.get("redirect") || "/thank-you.html";
-  const redirect = /^\/(?!\/)[A-Za-z0-9/_-]+(?:\.html)?$/.test(requestedRedirect) ? requestedRedirect : "/thank-you.html";
+  const partnerConfirmation = requestedRedirect === "https://cashforjunkcarsmiamifl.com/thank-you";
+  const redirect = partnerConfirmation || /^\/(?!\/)[A-Za-z0-9/_-]+(?:\.html)?$/.test(requestedRedirect) ? requestedRedirect : "/thank-you.html";
   res.writeHead(303, { Location: redirect });
   res.end();
 }
