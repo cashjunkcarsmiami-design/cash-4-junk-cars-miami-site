@@ -43,3 +43,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #d49300;outline-offset:4p
  .sticky-mobile-actions{padding-bottom:calc(10px + env(safe-area-inset-bottom));grid-template-columns:1.3fr 1fr}.sticky-mobile-actions a{font-size:15px}.sticky-mobile-actions a:first-child{background:#085a31;border:2px solid #f4c542}
  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}#quote{scroll-margin-top:20px}
 }
+
+/* Keep text readable on pale sections and avoid rendering offscreen guide grids. */
+.section .eyebrow{color:#745500}.hero .eyebrow{color:#f4c542}.local-service-details p{max-width:75ch}.section[id^="weekly-guides-"]{content-visibility:auto;contain-intrinsic-size:auto 900px}
