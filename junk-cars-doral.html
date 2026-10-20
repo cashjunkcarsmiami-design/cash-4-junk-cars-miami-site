@@ -116,19 +116,6 @@
 <section class="section" id="guia-2026-10-19" lang="es"><h2><a href="/carro-empresa-rotulacion-doral">Qué revisar de la rotulación al vender un carro de empresa en Doral</a></h2><p>Un vehículo de empresa en Doral puede llevar teléfonos, nombres comerciales o información de clientes en su exterior e interior.</p><p><time datetime="2026-10-19">19 de octubre de 2026</time> · <a href="/carro-empresa-rotulacion-doral">Leer la guía</a></p></section></main>
   <footer><strong>Cash 4 Junk Cars Miami</strong><a href="tel:+13054570817">(305) 457-0817</a><a href="https://wa.me/13054570817?text=Hola%2C%20quiero%20una%20oferta%20para%20vender%20mi%20carro.">WhatsApp (305) 457-0817</a><div><p>Mobile vehicle buying and pickup · Approximately 20 miles from our Miami base · No customer visits at the base address.</p><p><a href="/about-cash-4-junk-cars-miami">About and contact</a> · <a href="/seller-guides">Seller guides</a></p></div></footer>
   <nav class="sticky-mobile-actions" aria-label="Quick contact"><a href="tel:+13054570817">Call 305-457-0817</a><a class="whatsapp" href="https://wa.me/13054570817?text=Hola%2C%20quiero%20una%20oferta%20para%20vender%20mi%20carro.">WhatsApp</a></nav>
-<script>
-document.addEventListener('click', function(event) {
-  var link=event.target.closest('a[href^="tel:"],a[href*="wa.me"]');
-  if(!link || typeof gtag!=='function') return;
-  gtag('event',link.href.indexOf('tel:')===0?'phone_click':'whatsapp_click',{
-    event_category:'contact',event_label:location.pathname,
-    contact_placement:link.closest('.sticky-mobile-actions')?'sticky':link.closest('.hero')?'hero':link.closest('header')?'header':'content'
-  });
-});
-var form=document.getElementById('quote');
-if(form) form.addEventListener('submit',function(){
-  if(typeof gtag==='function') gtag('event','quote_submit_attempt',{event_category:'contact',event_label:location.pathname});
-});
-</script>
-<script src="/quote-validation.js" defer></script></body>
+
+<script src="/quote-validation.js" defer></script><script src="/contact-tracking.js?v=20261020" defer></script></body>
 </html>
