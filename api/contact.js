@@ -9,14 +9,22 @@ export default async function handler(req, res) {
   const chunks = [];
   for await (const chunk of req) chunks.push(chunk);
   const params = new URLSearchParams(Buffer.concat(chunks).toString("utf8"));
+  const wantsJson = (req.headers?.accept || "").includes("application/json");
+  const json = (status, body) => {
+    res.statusCode = status;
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.end(JSON.stringify(body));
+  };
 
   if (params.get("bot-field")) {
+    if (wantsJson) { json(400, {accepted:false}); return; }
     res.writeHead(303, { Location: "/thank-you.html" });
     res.end();
     return;
   }
 
   const reject = (status, message) => {
+    if (wantsJson) { json(status, {accepted:false}); return; }
     res.statusCode = status;
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     res.end(`<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quote request</title><main><h1>We could not send your request.</h1><p>${message}</p><p>Use your browser's Back button to correct your details and try again, or call <a href="tel:+13054570817">(305) 457-0817</a>.</p></main></html>`);
@@ -84,6 +92,7 @@ export default async function handler(req, res) {
     return;
   }
 
+  if (wantsJson) { json(200, {accepted:true}); return; }
   const requestedRedirect = params.get("redirect") || "/thank-you.html";
   const partnerConfirmation = requestedRedirect === "https://cashforjunkcarsmiamifl.com/thank-you";
   const redirect = partnerConfirmation || /^\/(?!\/)[A-Za-z0-9/_-]+(?:\.html)?$/.test(requestedRedirect) ? requestedRedirect : "/thank-you.html";
