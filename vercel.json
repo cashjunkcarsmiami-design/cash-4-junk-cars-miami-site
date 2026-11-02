@@ -35,6 +35,9 @@
     }
   ],
   "redirects": [
+    {"source":"/blog/los-5-errores-al-vender-tu-carro-al-rastro-en-miami","destination":"/compare-complete-junk-car-offers-miami","permanent":true},
+    {"source":"/blog/c-mo-vender-mi-carro-viejo-en-miami-por-cash-hoy-mismo.html","destination":"/first-phone-call-junk-car-offer-miami","permanent":true},
+    {"source":"/blog/c-mo-vender-mi-carro-viejo-en-miami-por-cash-hoy-mismo","destination":"/first-phone-call-junk-car-offer-miami","permanent":true},
     {
       "source": "/:path*",
       "has": [
