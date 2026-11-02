@@ -1,3 +1,8 @@
+# Public search access. Training-crawler rules remain unchanged.
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://cash-4-junk-cars-miami.com/sitemap.xml
